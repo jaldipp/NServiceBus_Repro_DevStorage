@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="HeadQuarters" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="HQStoreMessageProcessor">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="AzureQueueConfig.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=[Name];AccountKey=[Key]" />
+      <Setting name="AzureQueueConfig.QueueName" value="50000" />
+      <Setting name="Logging.Threshold" value="DEBUG" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="multistoreftw" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEGyIpIJgTP2ISLn5g9TzvzQwDQYJKoZIhvcNAQEBBQAEggEAC6rSpdQhCZSBq+GA70Q6JYfSJfVihoVNfujDpajvy4p42kmriNCZ89/9j3A3P6amJj6R9rt6elMlLc/zjTVK1ncJJOCdDOSUVX0ChwPlNNzAaJAyL1OZ9avlwFwaDrTI7rz137V52eCepm8naXOPx/DvVXm6ijT0Gdu7LRH9L3/QOclpI4O6RKJoWZMy1U7y7nR62ha/+nYistIF6Iq44IZZGJAoqf7sLY5Eq2Zcuf+zzx+h2cwunxlSxsvDnIP7VcXTe2WhAhYm426+vJrmaS71JIn32MZfH7wSz4rbyFGJO/kuV0E+ZnAazRDVeTBajRSo0N68eSE0wkxQ3uAMhzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECPKxRL6e64xzgBD5n862WL8XXtG7C8mGoPQg" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-12-31T23:59:59.0000000-06:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=[Name];AccountKey=[Key]" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="D97D954DCF90E7465D09CAB90748C3B4407B5264" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

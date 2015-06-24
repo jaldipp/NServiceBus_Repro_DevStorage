@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="HeadQuarters" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+  <WorkerRole name="HQStoreMessageProcessor" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="AzureQueueConfig.ConnectionString" />
+      <Setting name="AzureQueueConfig.QueueName" />
+      <Setting name="Logging.Threshold"/>
+    </ConfigurationSettings>
+  </WorkerRole>
+</ServiceDefinition>

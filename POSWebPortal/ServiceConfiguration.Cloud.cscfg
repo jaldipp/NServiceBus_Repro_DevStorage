@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="HeadQuarters" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="HQStoreMessageProcessor">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=[Name];AccountKey=[Key]" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="multistoredeployer" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEHhsTsL42PqdSegKIHkmNn0wDQYJKoZIhvcNAQEBBQAEggEAG/Ldt0FjacVzKZhYrjxeMV+/gHVpV49OrRUgHIsgHiNSGJQxYrsLhYYz+aPGAeUVP9mCFHt9aeC8ahz7YvhiK6vz0YIqIhuC04M54+JYkkggyaqPvA6FlmTEwG22tCRaJs8s8PeBNVBuIkbnjVV5rMG78hrozi34rZPCbSp19CMwbOJIVDEsjFHGB5QdFqxTmcBQbFiEg4xrC+AD3DNI4R2beZvBRBs0naHiFsod0IZDPgURfxsMekEb9DC5VZRz1M46g7YTkdrp2iMIBQd0WktCJsSa4Py+0ltDq+LQsmzCytS1E5R+OYCFLhcixLRrAdMLnDQTOWdIo1mNW2KX3TAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECEjT5q9vcl9TgBC9HovOPnvWwdOt67eT0s7w" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-11-26T23:59:59.0000000-06:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="AzureQueueConfig.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=[Name];AccountKey=[Key]" />
+      <Setting name="AzureQueueConfig.QueueName" value="50000" />
+      <Setting name="Logging.Threshold" value="DEBUG" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="3C4777E0686C224FAA50CBEB01AB261E764FD5EB" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
