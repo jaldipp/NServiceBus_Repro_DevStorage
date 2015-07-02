@@ -10,7 +10,6 @@
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-11-26T23:59:59.0000000-06:00" />
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
       <Setting name="AzureQueueConfig.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=[Name];AccountKey=[Key]" />
-      <Setting name="AzureQueueConfig.QueueName" value="50000" />
       <Setting name="Logging.Threshold" value="DEBUG" />
     </ConfigurationSettings>
     <Certificates>

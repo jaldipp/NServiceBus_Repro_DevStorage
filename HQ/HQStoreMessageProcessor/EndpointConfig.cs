@@ -13,7 +13,7 @@ namespace DataSync.HQ.HQStoreMessageProcessor
             configuration.AssembliesToScan(Assembly.GetExecutingAssembly(), typeof(AxisMessage).Assembly, typeof(ReportStoreMessage).Assembly, typeof(AzureStorageQueueTransport).Assembly);
             configuration.UseTransport<AzureStorageQueueTransport>();
             configuration.UsePersistence<InMemoryPersistence>();
-            configuration.EndpointName(CloudConfigurationManager.GetSetting("AzureQueueConfig.QueueName"));
+            configuration.EndpointName("50000");
             configuration.Transactions().DoNotWrapHandlersExecutionInATransactionScope();
             configuration.Transactions().Disable();
         }

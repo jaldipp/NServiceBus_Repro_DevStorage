@@ -4,7 +4,6 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="AzureQueueConfig.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=[Name];AccountKey=[Key]" />
-      <Setting name="AzureQueueConfig.QueueName" value="50000" />
       <Setting name="Logging.Threshold" value="DEBUG" />
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="multistoreftw" />

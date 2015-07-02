@@ -8,7 +8,6 @@
     </Imports>
     <ConfigurationSettings>
       <Setting name="AzureQueueConfig.ConnectionString" />
-      <Setting name="AzureQueueConfig.QueueName" />
       <Setting name="Logging.Threshold"/>
     </ConfigurationSettings>
   </WorkerRole>
